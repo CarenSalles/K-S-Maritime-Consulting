@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build-ghpages":"vite build --base-/ks-maritime-consulting/",
     "preview": "vite preview",
-    "test:unit": "vitest"
+    "test:unit": "vitest --environment jsdom"
   },
   "dependencies": {
     "pinia": "^2.0.32",
