@@ -1,6 +1,7 @@
 package com.caren.ksmaritimeconsulting.controllers;
 
-import org.apache.catalina.connector.Response;
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.caren.ksmaritimeconsulting.models.ServiceModel;
 import com.caren.ksmaritimeconsulting.services.ServiceService;
-
-import antlr.collections.List;
 
 @RestController
 @RequestMapping(path = "/api/services")
@@ -34,9 +33,9 @@ public class ServiceController {
 
     @GetMapping("/idService")
     public ResponseEntity<ServiceModel> findById(@PathVariable Long idService) {
-        ServiceModel service = service.findById(idService);
+        ServiceModel serviceM = service.findById(idService);
         if (service != null) {
-            return ResponseEntity.ok(service);
+            return ResponseEntity.ok(serviceM);
         } else {
             return ResponseEntity.notFound().build();
         }
@@ -48,7 +47,7 @@ public class ServiceController {
         try {
             return ResponseEntity.ok(service.save(newServiceModel));
         } catch (Exception exception) {
-            return ResponseEntity.status(500).body("Error");
+            return ResponseEntity.status(400).body("Error" + exception.getMessage());
         }
     }
 
@@ -56,9 +55,9 @@ public class ServiceController {
     public ResponseEntity<?> update(@RequestBody ServiceModel newService,
             @PathVariable(value = "idService") Long idService) {
 
-        ServiceModel service = service.update(newService, idService);
+        ServiceModel serviceM = service.update(newService, idService);
 
-        return ResponseEntity.ok().body(service);
+        return ResponseEntity.ok().body(serviceM);
     }
 
     @DeleteMapping("/{idservice}")

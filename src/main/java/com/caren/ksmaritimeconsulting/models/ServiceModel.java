@@ -14,7 +14,6 @@ public class ServiceModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_service")
-
     private Long id;
     private String name;
     private String description;

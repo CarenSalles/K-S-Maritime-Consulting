@@ -1,4 +1,9 @@
-INSERT INTO Services(name, description) 
-VALUES ('DP Basic Course', 'Dynimic Positioning Basic Training with Kongsberg System Controller'),
-       ('Manual and pulications translation', 'Translation of manuals, publications, documents and technical material for the sector and offshore operations')
-       ('Advanced AHTS Course', 'Advanced anchor handling operations training for the offshore sector');
+INSERT INTO Services(id_service,name, description) VALUES (default,'DP Basic Course', 'Dynimic Positioning Basic Training with Kongsberg System Controller')
+INSERT INTO Services(id_service,name, description) VALUES (default,'DP Basic Course', 'Dynimic Positioning Basic Training with Kongsberg System Controller')
+INSERT INTO Services(id_service,name, description) VALUES (default,'DP Basic Course', 'Dynimic Positioning Basic Training with Kongsberg System Controller')
+
+/* 
+,
+       (default,'Manual and pulications translation', 'Translation of manuals, publications, documents and technical material for the sector and offshore operations')
+       (default,'Advanced AHTS Course', 'Advanced anchor handling operations training for the offshore sector');
+ */
