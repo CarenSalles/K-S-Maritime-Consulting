@@ -1,6 +1,9 @@
 package com.caren.ksmaritimeconsulting.services;
 
 import java.util.List;
+import java.util.Optional;
+
+import javax.naming.NameNotFoundException;
 
 import org.springframework.stereotype.Service;
 
@@ -43,5 +46,14 @@ public class ServiceService {
         ServiceModel serviceToDelete = repository.findById(idService).orElse(null);
         repository.delete(serviceToDelete);
         return repository.findAll();
+    }
+
+    public ServiceModel show(Long id) throws NameNotFoundException {
+        ServiceModel service = repository.findById(id).orElseThrow(() -> new NameNotFoundException("not found"));
+        return service;
+    }
+
+    public Object index() {
+        return null;
     }
 }

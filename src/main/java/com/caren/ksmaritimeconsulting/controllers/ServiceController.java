@@ -31,7 +31,7 @@ public class ServiceController {
         return service.getAll();
     }
 
-    @GetMapping("/idService")
+    @GetMapping("/{idService}")
     public ResponseEntity<ServiceModel> findById(@PathVariable Long idService) {
         ServiceModel serviceM = service.findById(idService);
         if (service != null) {
@@ -51,7 +51,7 @@ public class ServiceController {
         }
     }
 
-    @PutMapping(path = "/¨{idService}")
+    @PutMapping(path = "/{idService}")
     public ResponseEntity<?> update(@RequestBody ServiceModel newService,
             @PathVariable(value = "idService") Long idService) {
 
