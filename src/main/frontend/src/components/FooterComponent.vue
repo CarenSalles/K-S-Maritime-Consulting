@@ -35,11 +35,16 @@
             >Service</RouterLink
           >
         </li>
+        <li>
+          <RouterLink class="nav-link" to="/serviceform"
+            >Service Form</RouterLink
+          >
+        </li>
     </ul>
     </div>
     <div class="footer__container-social-media">
       <a
-        href=" https://www.facebook.com/profile.php?id=100051181520137"
+        href="https://www.linkedin.com/in/carensalles"
         target="_blank"
         ><img
           class="image-icon icons"
@@ -81,7 +86,6 @@
 
   &__container-log {
     img {
-    //   width: 237px;
       width: 8vh;
       min-width: 140px;
       margin-bottom: 2vh;
