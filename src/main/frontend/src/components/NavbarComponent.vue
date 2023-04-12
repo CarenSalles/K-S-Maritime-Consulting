@@ -45,8 +45,8 @@ import { RouterLink } from "vue-router";
 nav {
   .container {
     img.logo {
-      width: 8vw;
-      object-fit:fill;
+      width: 8vh;
+      min-width: 100px;
      
     }
   }
@@ -65,6 +65,6 @@ nav {
 }
 
 .nav-item{
-    font-size: 5vh;
+    font-size: 4vh;
 }
 </style>
