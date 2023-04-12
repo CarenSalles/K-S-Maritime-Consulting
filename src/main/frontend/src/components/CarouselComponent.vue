@@ -13,21 +13,21 @@
         <img
           src="../../src/assets/images/ponte-barco.jpg"
           class="image-slider-3"
-          alt="..."
+          alt="vessel-bridge"
         />
       </div>
       <div class="carousel-item" data-bs-interval="5000">
         <img
           src="../../src/assets/images/caren-offshore.jpg"
           class="image-slider"
-          alt="..."
+          alt="caren-offshore-life"
         />
       </div>
       <div class="carousel-item" data-bs-interval="5000">
         <img
           src="../../src/assets/images/dof-subsea-rov-.jpg"
           class="image-slider"
-          alt="..."
+          alt="dp-console"
         />
       </div>
     </div>
