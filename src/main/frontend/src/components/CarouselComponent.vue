@@ -19,14 +19,14 @@
       <div class="carousel-item" data-bs-interval="5000">
         <img
           src="../../src/assets/images/caren-offshore.jpg"
-          class="image-slider"
+          class="image-slider-3"
           alt="caren-offshore-life"
         />
       </div>
       <div class="carousel-item" data-bs-interval="5000">
         <img
           src="../../src/assets/images/dof-subsea-rov-.jpg"
-          class="image-slider"
+          class="image-slider-3"
           alt="dp-console"
         />
       </div>
@@ -57,16 +57,16 @@
 </template>
 
 <style lang ="scss" scoped>
-.image-slider {
-  width: 100%;
-  height: 365px;
-  object-fit: contain;
-  object-position: inherit;
-}
+// .image-slider {
+//   width: 100%;
+//   // height:max-content;
+//   object-fit:cover;
+//   object-position: inherit;
+// }
 .image-slider-3 {
   width: 100%;
-  height: 365px;
-  object-fit:contain;
+  height: 40em;
+  object-fit:cover;
   object-position:inherit;
   
 }
@@ -80,11 +80,16 @@
   border-radius: 100%;
 }
 @media (min-width: 1471px) and (max-width: 2560px) {
-  .image-slider {
-    height: 460px;
+  .control-button {
+    height: 6rem;
+    width: 6rem;
   }
   .image-slider-3 {
-    height: 460px;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: top;
+
   }
 }
 @media (max-width: 1024px) {
@@ -92,34 +97,41 @@
     height: 4rem;
     width: 4rem;
   }
-  .image-slider {
-    height: 269px;
-  }
   .image-slider-3 {
-    height: 269px;
+    width: 100%;
+    height: 30em;
+    
   }
 }
 @media (max-width: 768px) {
-  .image-slider {
-    object-position: center;
-  }
-  .image-slider {
-    height: 305px;
-  }
   .image-slider-3 {
-    height: 305px;
+    height: 15em;
+    width: 100%;
+    object-fit: fill;
+    object-position:center center;
+  }
+  .control-button {
+    height: 2.5rem;
+    width: 2.5rem;
   }
 }
+
 @media (max-width: 425px) {
+  .image-slider-3{
+    height: 10em;
+  }
   .control-button {
-    height: 3rem;
-    width: 6rem;
+    height: 2.5rem;
+    width: 2.5rem;
   }
 }
 @media (max-width: 320px) {
   .control-button {
     height: 2.5rem;
     width: 2.5rem;
+  }
+    .image-slider-3{
+    height: 10em;
   }
 }
 </style>

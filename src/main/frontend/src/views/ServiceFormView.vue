@@ -13,13 +13,13 @@ import ServiceFormComponent from '../components/ServiceFormComponent.vue';
 <style lang="scss" scoped>
 .view-container{
 
-background-image: url("../assets/images/digital-transformation.jpg");
+background-image: url("../assets/images/offshore-wind-area.jpg");
 height: 100vh;
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 background-repeat: no-repeat;
-background-size: cover;
+background-size:cover;
 }
 </style>

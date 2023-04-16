@@ -7,7 +7,7 @@ import { RouterLink } from "vue-router";
     <div class="container">
       <a href="/" class="navbar-brand"
         ><img
-          src="../assets/images/K&S-Maritime-logo2.png"
+          src="../assets/images/logo-rectangular-grande.png"
           alt="K&S Maritime Consulting logo"
           class="logo"
       /></a>
@@ -30,13 +30,13 @@ import { RouterLink } from "vue-router";
           </li>
 
           <li class="nav-item">
-            <RouterLink to="/login" class="nav-link">Login</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink to="/service" class="nav-link">Service</RouterLink>
-          </li>
-          <li class="nav-item">
             <RouterLink to="/serviceform" class="nav-link">Service Form</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/service" class="nav-link">Services</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/login" class="nav-link">Login</RouterLink>
           </li>
         </ul>
       </div>
@@ -48,7 +48,7 @@ import { RouterLink } from "vue-router";
 nav {
   .container {
     img.logo {
-      width: 8vh;
+      width: 30vh;
       min-width: 100px;
      
     }

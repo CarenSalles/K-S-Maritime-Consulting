@@ -4,12 +4,12 @@
 
 <template>
     <footer class="footer w-100">
-    <div class="footer__container-log">
+    <!-- <div class="footer__container-log">
       <img
         src="../assets/images/K&S-Maritime-logo2.png"
         alt="logo K&S Maritime Consulting"
-      />
-    </div>
+      /> -->
+    <!-- </div> -->
     <div class="footer__container-title">
       <p class="footer__container-title__direction">
         K&S Maritime Consulting<br />
@@ -31,13 +31,13 @@
           >
         </li>
         <li>
-          <RouterLink class="nav-link" to="/service"
-            >Service</RouterLink
+          <RouterLink class="nav-link" to="/serviceform"
+            >Service Form</RouterLink
           >
         </li>
         <li>
-          <RouterLink class="nav-link" to="/serviceform"
-            >Service Form</RouterLink
+          <RouterLink class="nav-link" to="/service"
+            >Services</RouterLink
           >
         </li>
     </ul>
@@ -79,7 +79,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: end;
   color: aliceblue;
   padding: 2rem;
@@ -105,7 +105,7 @@
 
     &__copyright {
       font-size: 3.3vh;
-      color: aliceblue;
+      color: #DDBB44;
       margin-bottom: 0.2rem;
       
     }
