@@ -15,7 +15,7 @@ import LoginComponent from "../components/LoginComponent.vue"
 .login{
 
 background-image: url("../assets/images/digital-transformation.jpg");
-height: 100vh;
+height: 80vh;
 width: 100vw;
 display: flex;
 flex-direction: row;

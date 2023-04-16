@@ -29,8 +29,8 @@
 
 body {
   .wrapper {
-    width: 92%;
-    height: 60%;
+    width: 80%;
+    height: 22em;
     margin: 5em;
     padding: 5em;
     background-color: rgba(255, 255, 255, 0.75);
@@ -47,27 +47,28 @@ body {
     .form-label {
       color: rgb(17, 17, 63);
       font-weight: bold;
-      font-size: 2vh;
+      font-size: 3vh;
     }
+   
 
     #btn-delete {
       background-color: #cc0033;
       width: 20vw;
       color: #fffff2;
-      font-size: 2vh;
+      font-size: 2.5vh;
     }
 
     #btn-send {
-      background-color: #336644;
+      background-color: rgb(17, 17, 63);
       width: 20vw;
       color: #fffff2;
-      font-size: 2vh;
+      font-size: 2.5vh;
     }
     .btn-container {
       display: flex;
       justify-content: space-around;
       gap: 1.5vw;
-      margin-right: 1vw;
+      //                                               
     }
   }
 }
@@ -75,7 +76,7 @@ body {
 @media (min-width: 1024px) {
   body {
     .wrapper {
-      width: 60%;
+      width: 50%;
       height: 70%;
       margin: 5em;
       padding: 5em;
@@ -85,27 +86,17 @@ body {
       flex-direction: column;
       justify-content: space-around;
 
-      h1 {
-        text-align: center;
-        font-weight: bold;
-      }
-
-      .form-label {
-        color: rgb(17, 17, 63);
-        font-weight: bold;
-      }
-
       #btn-delete {
-        background-color: #cc0033;
+        
         width: 10vw;
         color: #fffff2 ;
       }
-
       #btn-send {
-        background-color: #336644;
+        
         width: 10vw;
         color: #fffff2 ;
       }
+      
       .btn-container {
         display: flex;
         justify-content: flex-end;

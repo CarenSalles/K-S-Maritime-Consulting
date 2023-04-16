@@ -37,16 +37,19 @@
   color: rgb(17, 17, 63);
 }
 #formStyle{
-    width: 65%;
-    margin-bottom: 3em;
+    width: 70%;
+    height: 10em;
  
 }
 h1{
-    // margin-top: .5em;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
     color:#cc0033;
+    margin-left: 1.2em;
 }
 .titleDescrip{
-    margin: 3em 0em 2em 0em;
+    // margin: 3em 0em 2em 0em;
+    font-size: 1.3em;
 }
 button{
     width: 10em;
@@ -55,5 +58,6 @@ button{
 margin-left: 0.5em;
 font-weight: bold;
 color: rgb(17, 17, 63);
+font-size: 1.5em;
 }
 </style>

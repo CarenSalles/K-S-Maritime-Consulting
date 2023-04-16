@@ -13,8 +13,8 @@ import ServiceFormComponent from '../components/ServiceFormComponent.vue';
 <style lang="scss" scoped>
 .view-container{
 
-background-image: url("../assets/images/offshore-wind-area.jpg");
-height: 100vh;
+background-color:#fffff2;
+height: 60vh;
 display: flex;
 flex-direction: row;
 justify-content: center;
