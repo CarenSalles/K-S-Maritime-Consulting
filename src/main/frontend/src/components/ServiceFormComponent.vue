@@ -5,7 +5,7 @@
 <template>
    <div class="container ">
     <h1>Service registration form:</h1>
-    <p class="titleDescrip">Here the administrator will be able to register the services that can be inserted in the list of services offered to the user of the page.</p>
+    <p class="titleDescrip">Here the administrator will be able to register the services that can be inserted in the list of services offered to the user of the web page.</p>
 </div>
     <div class="container d-flex justify-content-center">
     <div id="formStyle">
@@ -48,7 +48,7 @@ h1{
     margin-left: 1.2em;
 }
 .titleDescrip{
-    // margin: 3em 0em 2em 0em;
+ 
     font-size: 1.3em;
 }
 button{
