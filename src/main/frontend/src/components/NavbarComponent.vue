@@ -30,10 +30,13 @@ import { RouterLink } from "vue-router";
           </li>
 
           <li class="nav-item">
-            <RouterLink to="/serviceform" class="nav-link">Service Form</RouterLink>
+            <RouterLink to="/service" class="nav-link">Services</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/service" class="nav-link">Services</RouterLink>
+            <RouterLink to="/servicelist" class="nav-link">Services List</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/serviceform" class="nav-link">Service Form</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink to="/login" class="nav-link">Login</RouterLink>

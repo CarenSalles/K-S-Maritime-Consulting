@@ -1,9 +1,7 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-    <footer class="footer w-100">
+  <footer class="footer w-100">
     <!-- <div class="footer__container-log">
       <img
         src="../assets/images/K&S-Maritime-logo2.png"
@@ -18,52 +16,45 @@
         33201 - Gijón <br />
         Astúrias - Spain
       </p>
-      <p class="footer__container-title__copyright">&copy; K&S Maritime Consulting</p>
+      <p class="footer__container-title__copyright">
+        &copy; K&S Maritime Consulting
+      </p>
     </div>
     <div class="footer__container-navigation">
-        <ul>
+      <ul>
         <li>
           <RouterLink class="nav-link" to="/">Home</RouterLink>
         </li>
         <li>
-          <RouterLink class="nav-link" to="/login"
-            >Login</RouterLink
-          >
+          <RouterLink class="nav-link" to="/service">Services</RouterLink>
         </li>
         <li>
-          <RouterLink class="nav-link" to="/serviceform"
-            >Service Form</RouterLink
-          >
+          <RouterLink class="nav-link" to="/servicelist">Service List</RouterLink>
         </li>
         <li>
-          <RouterLink class="nav-link" to="/service"
-            >Services</RouterLink
-          >
+          <RouterLink class="nav-link" to="/serviceform">Service Form</RouterLink>
         </li>
-    </ul>
+        <li>
+          <RouterLink class="nav-link" to="/login">Login</RouterLink>
+        </li>
+      </ul>
     </div>
     <div class="footer__container-social-media">
-      <a
-        href="https://www.linkedin.com/in/carensalles"
-        target="_blank"
+      <a href="https://www.linkedin.com/in/carensalles" target="_blank"
         ><img
           class="image-icon icons"
           src="../assets/images/icon-Facebook.png"
           alt="facebbok-icon"
       /></a>
 
-      <a
-        href="https://github.com/CarenSalles"
-        target="_blank"
+      <a href="https://github.com/CarenSalles" target="_blank"
         ><img
           class="image-icon icons"
           src="../assets/images/icon-Instagram.png"
           alt="instagram-icon"
       /></a>
 
-      <a
-        href="https://www.linkedin.com/in/carensalles"
-        target="_blank"
+      <a href="https://www.linkedin.com/in/carensalles" target="_blank"
         ><img
           class="image-icon icons"
           src="../assets/images/icon-Linkedin.png"
@@ -93,7 +84,7 @@
   }
 
   &__container-title {
-    font-family: 'Libre Baskerville', serif;
+    font-family: "Libre Baskerville", serif;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -105,9 +96,8 @@
 
     &__copyright {
       font-size: 3.3vh;
-      color: #DDBB44;
+      color: #ddbb44;
       margin-bottom: 0.2rem;
-      
     }
   }
 
@@ -120,12 +110,12 @@
       font-size: 3vh;
     }
     a {
-      color:aliceblue;
+      color: aliceblue;
       transition: all 0.4s;
     }
     a.router-link-exact-active,
     a:hover {
-      color: #DDBB44;
+      color: #ddbb44;
       letter-spacing: 1px;
     }
   }
@@ -147,5 +137,4 @@
     opacity: 50%;
   }
 }
-
 </style>

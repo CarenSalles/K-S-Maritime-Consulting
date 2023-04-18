@@ -24,6 +24,11 @@ const router = createRouter({
       name: 'serviceform',
       component: () => import ('../views/ServiceFormView.vue')
     },
+    {
+      path: '/servicelist',
+      name: 'servicelist',
+      component: () => import ('../views/ServiceListView.vue')
+    },
   ]
 })
 
