@@ -75,7 +75,7 @@ function deletePost(id) {
 
         <div class="gap-3">
           <div class="text-name">
-          <p class="font-name" >{{ service.name }}</p>
+          <p class="font-name" >Service Title: {{ service.name }}</p>
             
           <p class="font-italic">Service Description: {{ service.description }}</p>
 
@@ -116,16 +116,25 @@ img {
   display: flex;
   justify-content: end;
   align-items: flex-end;
+ 
 }
 .col-md-1{
   display: flex;
   justify-content: center;
 }
+.font-name{
+  font-weight: bold;
+}
+
+.font-italic{
+  font-weight: bold;
+}
 .gap-3{
   width: 90%;
   display: flex;
   padding: 0.7rem;
-  background-color:  #feffd7;
+  background-color: rgb(211, 211, 214);
+  color:black;
 }
 @media (max-width: 767px) {
   .row {
@@ -145,6 +154,7 @@ img {
   }
   .font-name{
     font-size: 1rem;
+   
     
   }
   .gap-3{

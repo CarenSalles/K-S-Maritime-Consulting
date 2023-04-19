@@ -1,4 +1,36 @@
 <script setup>
+import { useRouter } from 'vue-router';
+
+let service = {
+  name: "",
+  description: "",
+};
+
+const router = useRouter();
+
+async function save() {
+  if (service.name === "") {
+    alert("Need to add name.");
+    return;
+  }
+
+  if (service.description === "") {
+    alert("You need to add a service description.")
+    return;
+  }
+
+  let results = {};
+  const payload = JSON.stringify(service);
+  const url = "http://localhost:8080/api"
+  const response = fetch(url, {
+    method: "POST",
+    body: payload,
+    headers: {
+      "Content-type": "application/json",
+      Accept: "application/json",
+    },
+  });
+}
 
 </script>
 
@@ -13,14 +45,30 @@
 <form class="row g-3" >
   <div class="col-12">
     <label for="inputName" class="form-label">Service name:</label>
-    <input type="text" class="form-control" id="inputName">
+    <input 
+    v-model="service.name"
+    id="inputName"
+    class="form-control"
+    type="text" 
+    placeholder="Name"
+    >
   </div>
   <div class="col-12">
   <label for="exampleFormControlTextarea1" class="form-label">Service Description:</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+  <textarea 
+  v-model="service.description"
+  class="form-control" 
+  placeholder="Description"
+  id="exampleFormControlTextarea1" rows="5">
+</textarea>
 </div>
 <div class="col-12 d-flex justify-content-center">
-    <button type="button" class="btn btn-success">ADD +</button>
+    <button 
+    @click.prevent="save"
+    type="submit" 
+    class="btn btn-success">
+    ADD +
+  </button>
   </div>
 </form>
 </div>
