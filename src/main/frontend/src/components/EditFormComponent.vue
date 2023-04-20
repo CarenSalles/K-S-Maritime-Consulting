@@ -1,49 +1,47 @@
 <script setup>
 import { useRouter } from "vue-router";
-import { service } from "../stores/service.js";
-import { computed } from "@vue/reactivity"
-
-const serviceToModify = service();
-const serviceData = computed(() => {
-    return serviceToModify.serviceObject;
-});
-
-let service = {
-    name: serviceToModify.serviceObject.name,
-    description: serviceToModify.serviceObject.description,
-};
+import { useServiceStore } from "../stores/service.js";
+import { onMounted, reactive, ref, watch } from "vue";
 
 const router = useRouter();
+const serviceStore = useServiceStore();
+let serviceToEdit = ref({});
 
-async function update(id) {
-    if (service.name === "") {
-        alert("You need to add a name")
-        return;
-    }
+onMounted(() => {
+  serviceToEdit.value = serviceStore.serviceToEdit;
+});
 
-    if (service.description === "") {
-        alert("You need to add a description")
-        return;
-    }
 
-    const payload = JSON.stringify(service);
-    const url = `http://localhost:8080/api/services/${id}`
-    const response = fetch(url, {
-        method: "PUT",
-        body: payload,
-        headers: {
-            "Content-type": "application/json",
-            Accept: "application/json",
-        },
-    })
+async function update() {
+  if (serviceToEdit.name === "") {
+    alert("You need to add a name");
+    return;
+  }
+
+  if (serviceToEdit.description === "") {
+    alert("You need to add a description");
+    return;
+  }
+
+  const payload = JSON.stringify(serviceToEdit.value);
+  const url = `http://localhost:8080/api/services/${serviceToEdit.value.id}`;
+  const response = fetch(url, {
+    method: "PUT",
+    body: payload,
+    headers: {
+      "Content-type": "application/json",
+      Accept: "application/json",
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
-        if (data.service != "") {
-         serviceToModify.serviceObject = service;
-         alert(data.service + "Updated successfully.");
-        } else {
-          alert("An error has occurred. \nPlease try again later.");
-        }
+      console.log(data);
+      // if (data.service != "") {
+      //   serviceToModify.serviceObject = service;
+      //   alert(data.service + "Updated successfully.");
+      // } else {
+      //   alert("An error has occurred. \nPlease try again later.");
+      // }
     });
 }
 </script>
@@ -53,12 +51,13 @@ async function update(id) {
     <div class="container mt-2">
       <div class="col-12 col-md-8">
         <h2 class="mt-2">
-          Change Service {{ service.name }} {{ service.description }}
+          Change Service {{ serviceToEdit.name }} with id:
+          {{ serviceToEdit.id }}
         </h2>
         <div class="mb-3">
           <label for="name" class="form-label">Service Title:</label>
           <input
-            v-model="service.name"
+            v-model="serviceToEdit.name"
             id="name"
             class="form-control"
             type="text"
@@ -70,7 +69,7 @@ async function update(id) {
             >Service Description:</label
           >
           <textarea
-            v-model="service.description"
+            v-model="serviceToEdit.description"
             class="form-control"
             placeholder="Description"
             id="exampleFormControlTextarea1"
@@ -80,7 +79,7 @@ async function update(id) {
         </div>
         <div class="d-flex mb-3 mt-3">
           <button
-            @click.prevent="update(serviceData.id)"
+            @click.prevent="update()"
             type="submit"
             class="btn btn-success me-2"
           >
@@ -94,9 +93,8 @@ async function update(id) {
 </template>
 
 <style lang="scss" scoped>
-
 h2 {
-  font-family:'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   text-align: center;
 }
 
@@ -118,7 +116,7 @@ h2 {
 }
 
 .label {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 input {
@@ -135,5 +133,4 @@ input {
     width: 10%;
   }
 }
-
 </style>

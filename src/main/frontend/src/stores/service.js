@@ -1,8 +1,17 @@
-import { ref } from 'vue'
-import { defineStore } from 'pinia'
+import { ref } from "vue";
+import { defineStore } from "pinia";
 
-export const service = defineStore ('auth', () => {
+export const useServiceStore = defineStore("auth", () => {
   const serviceObject = ref([]);
-  return serviceObject
-})
+  const serviceToEdit = ref({});
 
+  function saveServices(services) {
+    serviceObject.value = services;
+  }
+
+  function saveServiceToEdit(service) {
+    serviceToEdit.value = service;
+  }
+
+  return { serviceObject, saveServices, serviceToEdit, saveServiceToEdit };
+});

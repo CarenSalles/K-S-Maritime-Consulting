@@ -1,15 +1,10 @@
 <script setup>
 import { onBeforeMount, ref, computed } from "vue";
 import ApiRepository from "../assets/ApiRepository/ApiRepository.js";
-import { service } from "../stores/service.js";
+import { useServiceStore } from "../stores/service.js";
 import router from "../router/index";
 
-const serviceItem = service();
-
-function update(service) {
-    serviceItem.serviceObject = service;
-    router.push("/servicechange");
-}
+const serviceStore = useServiceStore();
 
 //Api
 const repository = new ApiRepository("services");
@@ -18,41 +13,48 @@ const api = repository.chooseApi();
 const serviceCardxPage = 3;
 const start = ref(0);
 const end = computed(() =>
-    Math.min(start.value + serviceCardxPage, servicesList.value.length)
+  Math.min(start.value + serviceCardxPage, servicesList.value.length)
 );
 
 let servicesList = ref([]);
+
 onBeforeMount(async () => {
-    servicesList.value = await api.getAll();
+  servicesList.value = await api.getAll();
+  serviceStore.saveServices(servicesList.value);
 });
 
+function update(service) {
+  serviceStore.saveServiceToEdit(service);
+  router.push({ name: "servicechange", params: { id: service.id } });
+}
+
 const servicesToShow = computed(() => {
-    return servicesList.value.slice(start.value, end.value);
+  return servicesList.value.slice(start.value, end.value);
 });
 
 const next = () => {
-    start.value += serviceCardxPage;
+  start.value += serviceCardxPage;
 };
 
 const prev = () => {
-    start.value = Math.max(start.value - serviceCardxPage, 0);
+  start.value = Math.max(start.value - serviceCardxPage, 0);
 };
 
 const page = (algo) => {
-    start.value = algo;
+  start.value = algo;
 };
 
 function deletePost(id) {
-    if (confirm("Are you sure you want to delete this service?") == true)  {
-      fetch(`http://localhost:8080/api/services/${id}`, {
-        method: "DELETE",
-        headers: {
-            "Content-Type": "application/json",
-        },
-      });
-      alert("Delete successfull");
-      location.reload();
-    }
+  if (confirm("Are you sure you want to delete this service?") == true) {
+    fetch(`http://localhost:8080/api/services/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    alert("Delete successfull");
+    location.reload();
+  }
 }
 </script>
 
@@ -75,28 +77,38 @@ function deletePost(id) {
 
         <div class="gap-3">
           <div class="text-name">
-          <p class="font-name" >Service Title: {{ service.name }}</p>
-            
-          <p class="font-italic">Service Description: {{ service.description }}</p>
+            <p class="font-name">Service Title: {{ service.name }}</p>
 
+            <p class="font-italic">
+              Service Description: {{ service.description }}
+            </p>
           </div>
           <div class="card-body">
             <p class="btnservice">
               <button
                 type="button"
                 class="btn btn-danger"
-                @click="deletePost(service.id)">DELETE</button>
-              <button type="button" class="btn btn-warning" @click="update(service)">EDIT</button>
+                @click="deletePost(service.id)"
+              >
+                DELETE
+              </button>
+              <button
+                type="button"
+                class="btn btn-warning"
+                @click="update(service)"
+              >
+                EDIT
+              </button>
             </p>
           </div>
         </div>
       </div>
     </div>
- </main>
-</template> 
+  </main>
+</template>
 
 <style lang="scss" scoped>
-.row{
+.row {
   width: 90%;
   margin: auto;
   margin-top: 5vw;
@@ -112,29 +124,28 @@ img {
   margin: 0.3em;
   width: 5.4em;
 }
-.card-body{
+.card-body {
   display: flex;
   justify-content: end;
   align-items: flex-end;
- 
 }
-.col-md-1{
+.col-md-1 {
   display: flex;
   justify-content: center;
 }
-.font-name{
+.font-name {
   font-weight: bold;
 }
 
-.font-italic{
+.font-italic {
   font-weight: bold;
 }
-.gap-3{
+.gap-3 {
   width: 90%;
   display: flex;
   padding: 0.7rem;
   background-color: rgb(211, 211, 214);
-  color:black;
+  color: black;
 }
 @media (max-width: 767px) {
   .row {
@@ -144,32 +155,30 @@ img {
     width: 100%;
     margin-top: 5vw;
     aspect-ratio: 16/9;
-  object-fit: cover;
+    object-fit: cover;
   }
-  .btnsUser{
+  .btnsUser {
     display: flex;
     justify-content: space-around;
     // width: 100%;
     // justify-content: center;
   }
-  .font-name{
+  .font-name {
     font-size: 1rem;
-   
-    
   }
-  .gap-3{
+  .gap-3 {
     display: block;
     width: 100%;
     margin: auto;
     margin-top: 1rem;
   }
-  .card-body{
+  .card-body {
     display: flex;
     justify-content: center;
     margin-top: 0.7rem;
   }
 }
-.card{
-  background-color:#fffff2;
+.card {
+  background-color: #fffff2;
 }
 </style>

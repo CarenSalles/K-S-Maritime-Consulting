@@ -1,7 +1,7 @@
 <script setup>
-import { EditForm } from "../components/EditForm.vue";
+import EditFormComponent from "../components/EditFormComponent.vue";
 </script>
 
 <template>
-    <EditForm />
+    <EditFormComponent />
 </template>

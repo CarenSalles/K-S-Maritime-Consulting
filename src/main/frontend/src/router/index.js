@@ -30,7 +30,7 @@ const router = createRouter({
       component: () => import ('../views/ServiceListView.vue')
     },
     {
-    path: '/servicechange',
+    path: '/servicechange/:id',
       name: 'servicechange',
       props: true,
       component: () => import ('../views/EditServiceView.vue'),
