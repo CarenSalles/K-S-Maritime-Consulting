@@ -1,4 +1,31 @@
 <script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
+// const props = defineProps({
+//   title:{
+//     type: String,
+//     default: 'login'
+//   }
+// })
+
+const username = ref("")
+const password = ref("")
+
+const submit = async () => {
+  username.value.length || password.value.length < 4 ? alert("Fields must contain at least 8 characters"):null;
+}
+
+function required (value) {
+  return !!value || 'This field is required'
+}
+
+function counter(value) {
+  return value.length < 40 || 'Max 40 charecters'
+  
+}
 
 </script>
 
@@ -6,8 +33,12 @@
     <form class="wrapper">
         <h1>Login</h1>
         <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Usuario:</label>
+        <label for="exampleInputEmail1" class="form-label">Username:</label>
         <input
+            v-model="username"
+            maxlength="40"
+            :rules="[required, counter]"
+            required
             type="email"
             class="form-control"
             id="exampleInputEmail1"
@@ -15,12 +46,19 @@
         />
     </div>
     <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Contraseña:</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" />
+      <label for="exampleInputPassword1" class="form-label">Password:</label>
+      <input 
+      v-model="password"
+      type="password" 
+      maxlength="40"
+      :rules="[required, counter]"
+      required
+      class="form-control" 
+      id="exampleInputPassword1" />
     </div>
     <div class="btn-container">
-      <button type="submit" id="btn-delete" class="btn btn">Borrar</button>
-      <button type="submit" id="btn-send" class="btn btn">Enviar</button>
+      <button type="reset" id="btn-delete" class="btn btn" >Reset</button>
+      <button type="submit" id="btn-send" class="btn btn" @click="submit()">Submit</button>
     </div>
   </form>
 </template>

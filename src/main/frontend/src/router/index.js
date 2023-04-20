@@ -29,7 +29,13 @@ const router = createRouter({
       name: 'servicelist',
       component: () => import ('../views/ServiceListView.vue')
     },
-  ]
-})
+    {
+    path: '/servicechange',
+      name: 'servicechange',
+      props: true,
+      component: () => import ('../views/EditServiceView.vue'),
+    }
+  ],
+});
 
 export default router
