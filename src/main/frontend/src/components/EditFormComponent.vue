@@ -83,9 +83,9 @@ async function update() {
             type="submit"
             class="btn btn-success me-2"
           >
-            Change
+            CHANGE
           </button>
-          <button type="reset" class="btn btn-danger">Reset</button>
+          <button type="reset" class="btn btn-danger">DELETE</button>
         </div>
       </div>
     </div>
@@ -106,7 +106,7 @@ h2 {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: #fffff2;
+  background-color: rgb(211, 211, 214);
   height: 100%;
 }
 

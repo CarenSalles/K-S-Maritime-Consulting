@@ -53,12 +53,16 @@ const page = (algo) => {
         width: 90%;
         margin: 2em;
         font-weight: bold;
+        color:#cc0033;
+        font-size: 3em;
     }
 
     .services-container{
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-weight: bold;
+        color:rgb(17, 17, 63) ;
     }
 }
 </style>

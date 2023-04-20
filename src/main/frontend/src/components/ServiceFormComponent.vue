@@ -21,7 +21,7 @@ async function save() {
 
   let results = {};
   const payload = JSON.stringify(service);
-  const url = "http://localhost:8080/api"
+  const url = "http://localhost:8080/api/services"
   const response = fetch(url, {
     method: "POST",
     body: payload,
@@ -77,16 +77,17 @@ async function save() {
 
 <style lang="scss" scoped>
 .container {
-  margin-bottom: 8em;
+  margin-bottom: 10em;
   flex-direction: column;
   font-size: 1em;
   width: 40vw;
   font-weight: bold;
   color: rgb(17, 17, 63);
+  
 }
 #formStyle{
     width: 70%;
-    height: 10em;
+    height: 15em;
  
 }
 h1{
@@ -94,10 +95,14 @@ h1{
     margin-bottom: 1em;
     color:#cc0033;
     margin-left: 1.2em;
+    font-weight: bold;
+    font-size: 2em;
+    
 }
 .titleDescrip{
  
     font-size: 1.3em;
+    
 }
 button{
     width: 10em;
@@ -107,5 +112,60 @@ margin-left: 0.5em;
 font-weight: bold;
 color: rgb(17, 17, 63);
 font-size: 1.5em;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 40%;
+    height: 30vh;
+  }
+  .row g-3{
+    height: 10em;
+  }
+  #formStyle{
+    width: 80%;
+    height: 35vh;
+    margin-top: 6vh;
+  }
+
+  h1{
+    font-size: 4vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 50%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  #formStyle{
+    width: 80%;
+    height: 40vh;
+  }
+
+  h1{
+    margin-top: 15vh;
+    font-weight: bold;
+    font-size: 1.2em;
+    
+}
+.titleDescrip{
+ 
+    font-size: .8em;
+    margin-left: 6vw;
+    
+    
+}
+button{
+    width: 8em;
+}
+.form-label{
+  margin-top: 1em;
+font-weight: bold;
+font-size: 1em;
+}
 }
 </style>

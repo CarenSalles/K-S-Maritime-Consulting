@@ -13,7 +13,7 @@ import ServiceFormComponent from '../components/ServiceFormComponent.vue';
 <style lang="scss" scoped>
 .view-container{
 
-background-color:#fffff2;
+background-color:rgb(211, 211, 214);
 height: 60vh;
 display: flex;
 flex-direction: row;

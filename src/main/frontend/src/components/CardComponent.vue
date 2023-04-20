@@ -9,13 +9,11 @@ const props = defineProps({
 
 <template>
  <div :id="`card-size${service.id}`"  class="card-container">
-    <figure>
         <img src="../assets/images/dp-cosole.jpg" alt="DP console Training">
-    </figure>
- </div>
- <div class="text-container">
-    <h3>{{ service.name }}</h3>
-    <p>{{ service.description }}</p>
+        <div class="text-container">
+           <h3>{{ service.name }}</h3>
+           <p>{{ service.description }}</p>
+        </div>
  </div>
 
 </template>
@@ -24,8 +22,9 @@ const props = defineProps({
 .card-container{
     display: flex;
     width: 90%;
-    background-color: #feffd7;
+    background-color: #fffff2;
     margin-bottom: 2em;
+    border-radius: 1em;
 
     img{
         width:45%;
@@ -33,13 +32,17 @@ const props = defineProps({
     }
     h3{
         font-weight: bold;
+        font-size: 2em;
+        color: #cc0033;
     }
 
     .text-container{
         display:flex;
-        flex-direction:colum;
+        flex-direction:column;
         justify-content: space-evenly;
         padding:1em;
+        flex-wrap: wrap;
+        max-width: 35em;
     }
 }
 </style>
