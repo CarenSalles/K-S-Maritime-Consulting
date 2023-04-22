@@ -2,6 +2,15 @@
 
 ## K&S Maritime Consulting
 
+## Contexto del proyecto
+- Requisitos mínimos solicitados:
+
+Frontend: El uso de un framework no es obligatorio pero si recomendado (En el caso de no usar un framework se deberá utilizar un enpaquetador Ej: Vite) El frontend realizará solicitudes a la API REST Desde la parte del front se tiene que poder realizar las acciónes de un CRUD
+
+Backend: La parte de backend se debe realizar con JAVA y utilizando Springboot Se deberá contruir una API REST para que el front pueda consumir lo datos. La API debe permitir realizar un CRUD
+
+Extra: Implementar la posibilidad de realizar una busqueda de un dato en concreto con un buscador
+
 ## Tabla de Contenido
 1. [Información General](#Info-General)
 2. [Tecnologías](#Tecnologías)
@@ -14,17 +23,15 @@ El propósito es buscar clientes que prioricen servicios de calidad, modernos y 
 
 ### Sección de página de Inicio con:
  - Carousel de imágenes
- - Listado de Servicios
  - Quienes somos
  - Nuestros Valores
  
 ### Sección de servicios con:
  - Servicios ofrecidos
  - Cada servicio incluy imagen, titulo, descripción.
- - 
 ### Sección de Listado de servicios con :
   - Foto, nombre, description.
-  - 
+ 
 ### Sección de contacto(mails) con:
   - Formulario para que los contraten y tengan más informaciones.
   - Nombre, correo, teléfono, consulta.
@@ -44,11 +51,11 @@ El propósito es buscar clientes que prioricen servicios de calidad, modernos y 
 
 ### Login con:
 - Registro de usuarios
-  - Posibilidad de hacer admin a un usuario.
+- Posibilidad de hacer admin a un usuario.
 - A cada usuario hay que añadirle:
- - Contraseña
- - Rol
- - Nombre de usuario (nickname)
+- Contraseña
+- Rol
+- Nombre de usuario (nickname)
  
 ### Admin. Listado de usuarios
  - Borrar y modificar.
@@ -133,7 +140,8 @@ mvn spring-boot:run
 ```
 
 
-### Autoras/es
+### Autora
+[<img src="https://avatars.githubusercontent.com/u/116892294?v=4" width=115><br><sub>Caren Salles</sub>](https://github.com/CarenSalles)
 
 - [Caren Salles] (https://github.com/CarenSalles)
 
