@@ -18,7 +18,7 @@ Extra: Implementar la posibilidad de realizar una busqueda de un dato en concret
 4. [Autoras/es](#Autora)
 
 ## Información General
-La página consiste en una consultoría que ofrece servicios a la industria de petróleo y gas offshore.
+La página consiste en una consultoría que ofrece servicios a la industria offshore.
 El propósito es buscar clientes que prioricen servicios de calidad, modernos y tecnológicos, buscando siempre un excelente servicio y atención al cliente.
 
 ### Sección de página de Inicio con:
