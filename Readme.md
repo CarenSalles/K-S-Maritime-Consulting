@@ -11,7 +11,7 @@ Backend: La parte de backend se debe realizar con JAVA y utilizando Springboot S
 
 Extra: Implementar la posibilidad de realizar una busqueda de un dato en concreto con un buscador
 
-## Tabla de Contenido![Diagrama-de-Flujo-Proyecto-Personal](https://user-images.githubusercontent.com/116892294/233811385-6f81e604-7c80-4929-b02c-71448af457ce.png)
+## Tabla de Contenido
 
 1. [Información General](#Info-General)
 2. [Tecnologías](#Tecnologías)
