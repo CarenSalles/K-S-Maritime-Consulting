@@ -84,10 +84,19 @@ El propósito es buscar clientes que prioricen servicios de calidad, modernos y 
 
 ![Diagrama DB](https://user-images.githubusercontent.com/116894398/231455794-b45b692d-61f5-4bd5-8fd8-9c34acd75aeb.png)
 
-### Instalación
-1.Npm Install
+# Instalación
 
+## Project Setup
 
+```sh
+npm install
+```
+
+## Project Setup 
+
+```sh
+Spring Initializr(https://start.spring.io/)
+```
 # vue-project
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -99,12 +108,6 @@ This template should help get you started developing with Vue 3 in Vite.
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
 
 ### Compile and Hot-Reload for Development
 
@@ -122,6 +125,12 @@ npm run build
 
 ```sh
 npm run test:unit
+```
+
+### Run Spring Boot with [Maven Respository](https://spring.io/guides/gs/spring-boot/)
+
+```sh
+mvn spring-boot:run
 ```
 
 
