@@ -36,7 +36,6 @@ El propósito es buscar clientes que prioricen servicios de calidad, modernos y 
 ### Sobre nosotros con:
  - Descripción
  - Historia.
- - 
 ### Sección de Login: para los que estén registrados.
 
 ### Logout.
@@ -78,11 +77,11 @@ El propósito es buscar clientes que prioricen servicios de calidad, modernos y 
 - Diagram.net
 
 ### Diagrama de Flujo
-![diagrama-xaréu](https://user-images.githubusercontent.com/116894398/227614458-10dd6688-0a68-4eda-8b70-a1e6f0e05129.png)
-(https://app.diagrams.net/#G18XdNdeIutT_JIK9P2zwAQySx-NNoXrXR)
 
 
-![Diagrama DB](https://user-images.githubusercontent.com/116894398/231455794-b45b692d-61f5-4bd5-8fd8-9c34acd75aeb.png)
+### Diagrama de Base de Datos
+
+![Diagrama-basededatos-K S  Maritime Consulting](https://user-images.githubusercontent.com/116892294/233790064-93f3ebad-40ad-4423-b142-c91fb19d8a5d.png)
 
 # Instalación
 
