@@ -26,4 +26,14 @@ public class ServiceRepositoryTest {
 
     }
 
+    @Test
+    public void save_ShouldIdSaveService() {
+        ServiceModel newServiceModel = new ServiceModel();
+        newServiceModel.setName("I am a new service");
+        serviceRepository.save(newServiceModel);
+        assertThat(newServiceModel.getId()).isEqualTo(4L);
+        assertThat(newServiceModel.getName()).isEqualTo("I am a new service");
+
+    }
+
 }
