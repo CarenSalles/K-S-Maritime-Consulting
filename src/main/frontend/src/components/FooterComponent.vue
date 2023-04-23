@@ -40,14 +40,14 @@
       </ul>
     </div>
     <div class="footer__container-social-media">
-      <a href="https://www.linkedin.com/in/carensalles" target="_blank"
+      <a href="https://github.com/CarenSalles" target="_blank"
         ><img
           class="image-icon icons"
           src="../assets/images/icon-Facebook.png"
           alt="facebbok-icon"
       /></a>
 
-      <a href="https://github.com/CarenSalles" target="_blank"
+      <a href="https://www.instagram.com/kralj.valentin/?igshid=YmMyMTA2M2Y%3D" target="_blank"
         ><img
           class="image-icon icons"
           src="../assets/images/icon-Instagram.png"

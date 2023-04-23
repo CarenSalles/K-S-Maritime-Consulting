@@ -48,7 +48,7 @@ async function update() {
 
 <template>
   <form>
-    <div class="container mt-2">
+    <div class="container mt-3">
       <div class="col-12 col-md-8">
         <h2 class="mt-2">
           Change the Service {{ serviceToEdit.name }} with id:
