@@ -10,7 +10,7 @@ const serviceStore = useServiceStore();
 const repository = new ApiRepository("services");
 const api = repository.chooseApi();
 
-const serviceCardxPage = 3;
+const serviceCardxPage = 6;
 const start = ref(0);
 const end = computed(() =>
   Math.min(start.value + serviceCardxPage, servicesList.value.length)
@@ -61,7 +61,7 @@ function deletePost(id) {
 <template>
   <main>
     <div
-      class="card mb-3"
+      class="card mb-5"
       v-for="service in servicesToShow"
       :key="service.id"
       :member="service"
@@ -75,31 +75,29 @@ function deletePost(id) {
           />
         </div>
 
-        <div class="gap-3">
+        <div class="gap-5">
           <div class="text-name">
-            <p class="font-name">Service Title: {{ service.name }}</p>
+            <p class="font-name">Service Title: <span>{{ service.name }}</span></p>
 
             <p class="font-italic">
-              Service Description: {{ service.description }}
+              {{ service.description }}
             </p>
           </div>
           <div class="card-body">
-            <p class="btnservice">
-              <button
-                type="button"
-                class="btn btn-danger"
-                @click="deletePost(service.id)"
-              >
-                DELETE
-              </button>
-              <button
-                type="button"
-                class="btn btn-warning"
-                @click="update(service)"
-              >
-                EDIT
-              </button>
-            </p>
+            <button
+              type="button"
+              class="btn btn-danger"
+              @click="deletePost(service.id)"
+            >
+              DELETE
+            </button>
+            <button
+              type="button"
+              class="btn btn-warning"
+              @click="update(service)"
+            >
+              EDIT
+            </button>
           </div>
         </div>
       </div>
@@ -108,45 +106,67 @@ function deletePost(id) {
 </template>
 
 <style lang="scss" scoped>
-.row {
+.card {
   width: 90%;
-  margin: auto;
-  margin-top: 5vw;
-  display: grid;
-  grid-template-columns: 2fr 8fr;
-}
-img {
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  width: 200px;
-}
-.btn {
-  margin: 0.3em;
-  width: 5.4em;
-}
-.card-body {
-  display: flex;
-  justify-content: end;
-  align-items: flex-end;
-}
-.col-md-1 {
-  display: flex;
-  justify-content: center;
-}
-.font-name {
-  font-weight: bold;
+  height: 50vh;
+  margin-left: 10vh;
+  margin-top: 6vh;
+
+  .row {
+    width: 90%;
+    margin: auto;
+    margin-top: 5vw;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+  }
+  img {
+    aspect-ratio: 16/9;
+    object-fit: fill;
+    width: 100%;
+    height: 30vh;
+  }
+  .btn {
+    margin: 0.3em;
+    width: 5.4em;
+  }
+  .card-body {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+  }
+  .col-md-1 {
+    display: flex;
+    justify-content: center;
+  }
+  .font-name {
+    font-weight: bold;
+    font-size: 3vh;
+    span{
+      color: #cc0033;
+    }
+  }
+
+  .font-italic {
+    font-weight: bold;
+    font-size: 3vh;
+  
+    
+    
+  }
+  .gap-5 {
+    width: 100%;
+    display: flex;
+    padding: 0.7rem;
+    background-color: rgb(211, 211, 214);
+    color: rgb(17, 17, 63);
+    max-height: 30vh;
+
+    .text-name{
+      padding-top: 6vh;
+    }
+  }
 }
 
-.font-italic {
-  font-weight: bold;
-}
-.gap-3 {
-  width: 90%;
-  display: flex;
-  padding: 0.7rem;
-  background-color: rgb(211, 211, 214);
-  color: black;
-}
 @media (max-width: 767px) {
   .row {
     grid-template-columns: 1fr;
@@ -166,11 +186,11 @@ img {
   .font-name {
     font-size: 1rem;
   }
-  .gap-3 {
+  .gap-5 {
     display: block;
     width: 100%;
     margin: auto;
-    margin-top: 1rem;
+    margin: 1rem;
   }
   .card-body {
     display: flex;
