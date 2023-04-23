@@ -6,7 +6,7 @@ import ApiRepository from "../assets/ApiRepository/ApiRepository";
 const repository = new ApiRepository("services");
 const api = repository.chooseApi();
 
-const serviceCardxPage = 3;
+const serviceCardxPage = 6;
 const start = ref(0);
 const end = computed(() => Math.min(start.value + serviceCardxPage, servicesList.value.length));
 
@@ -53,8 +53,9 @@ const page = (algo) => {
         width: 90%;
         margin: 2em;
         font-weight: bold;
-        color:#cc0033;
+        color:rgb(17, 17, 63);
         font-size: 3em;
+        text-decoration:underline;
     }
 
     .services-container{

@@ -51,7 +51,7 @@ async function update() {
     <div class="container mt-2">
       <div class="col-12 col-md-8">
         <h2 class="mt-2">
-          Change Service {{ serviceToEdit.name }} with id:
+          Change the Service {{ serviceToEdit.name }} with id:
           {{ serviceToEdit.id }}
         </h2>
         <div class="mb-3">
@@ -83,9 +83,9 @@ async function update() {
             type="submit"
             class="btn btn-success me-2"
           >
-            CHANGE
+            EDIT
           </button>
-          <button type="reset" class="btn btn-danger">DELETE</button>
+          <button type="reset" class="btn btn-danger">CANCEL</button>
         </div>
       </div>
     </div>
@@ -99,7 +99,7 @@ h2 {
 }
 
 .container {
-  width: 80%;
+  width: 65%;
   max-width: none;
   margin: 0 auto;
   display: flex;
@@ -107,7 +107,7 @@ h2 {
   align-items: center;
   flex-direction: column;
   background-color: rgb(211, 211, 214);
-  height: 100%;
+  height: 70vh;
 }
 
 .form-control {
