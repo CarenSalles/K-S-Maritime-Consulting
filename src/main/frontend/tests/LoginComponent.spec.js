@@ -21,7 +21,28 @@ describe("Login Component", ()=> {
     expect(btnExist.exists()).toBe("true");
     expect(btnExist.text()).toBe("Reset");
 
-    })
+    });
+});
+
+it("tag button should exists ",() => {
+    const wrapper = shallowMount(LoginComponent,{
+        global: {
+            plugins:[pinia],
+        },
+    });
+     
+    const btnExist2 = wrapper.find("button");
+    expect(btnExist2.exists()).toBe(true);
+    expect(btnExist2.text()).toBe("Reset");
+
 })
+
+
+
+
+    
+
+
+
 
 

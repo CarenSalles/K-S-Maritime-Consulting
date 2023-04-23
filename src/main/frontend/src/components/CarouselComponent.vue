@@ -57,12 +57,7 @@
 </template>
 
 <style lang ="scss" scoped>
-// .image-slider {
-//   width: 100%;
-//   // height:max-content;
-//   object-fit:cover;
-//   object-position: inherit;
-// }
+
 .image-slider-3 {
   width: 100%;
   height: 40em;
