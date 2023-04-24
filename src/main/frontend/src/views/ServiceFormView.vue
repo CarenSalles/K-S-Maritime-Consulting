@@ -11,9 +11,10 @@ import ServiceFormComponent from '../components/ServiceFormComponent.vue';
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/variables";
 .view-container{
 
-background-color:rgb(211, 211, 214);
+background-color:$background-body;
 height: 60vh;
 display: flex;
 flex-direction: row;

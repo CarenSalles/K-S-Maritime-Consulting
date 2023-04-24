@@ -57,6 +57,7 @@
 </template>
 
 <style lang ="scss" scoped>
+@import "../assets/sass/variables";
 
 .image-slider-3 {
   width: 100%;
@@ -66,7 +67,7 @@
   
 }
 .control-button {
-  background-color: rgb(17, 17, 63);
+  background-color: $background-blue;
   height: 5rem;
   width: 5rem;
   display: flex;
