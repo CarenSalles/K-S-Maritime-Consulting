@@ -77,13 +77,14 @@ async function save() {
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/variables";
 .container {
   margin-bottom: 10em;
   flex-direction: column;
   font-size: 1em;
   width: 40vw;
   font-weight: bold;
-  color: rgb(17, 17, 63);
+  color: $background-blue;
 }
 #formStyle {
   width: 70%;
@@ -92,7 +93,7 @@ async function save() {
 h1 {
   margin-top: 1.5em;
   margin-bottom: 1em;
-  color: #cc0033;
+  color: $text-color;
   margin-left: 1.2em;
   font-weight: bold;
   font-size: 2em;
@@ -109,7 +110,7 @@ form {
   .form-label {
     margin-left: 0.5em;
     font-weight: bold;
-    color: rgb(17, 17, 63);
+    color: $text-blue;
     font-size: 1.5em;
   }
 }

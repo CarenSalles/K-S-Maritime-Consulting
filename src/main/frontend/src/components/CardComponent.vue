@@ -18,10 +18,11 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/variables";
 .card-container {
   display: flex;
   width: 90%;
-  background-color: #ffffff;
+  background-color: $background-white;
   margin-bottom: 2em;
   border-radius: 1em;
 
@@ -32,7 +33,7 @@ const props = defineProps({
   h3 {
     font-weight: bold;
     font-size: 2em;
-    color: #cc0033;
+    color: $text-red;
   }
 
   .text-container {
