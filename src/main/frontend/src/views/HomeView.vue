@@ -111,6 +111,8 @@ import FooterComponent from "../components/FooterComponent.vue";
   </main>
 </template>
 <style lang="scss" scoped>
+@import "../assets/sass/variables";
+
 main {
   height: 120em;
   .aboutus-container {
@@ -122,21 +124,21 @@ main {
     gap: 1rem;
     margin: 5rem 0 5rem 5rem;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: $background-container;
     border-radius: 1rem;
     img {
       height: 22rem;
     }
     h2 {
       font-size: 2rem;
-      color: rgb(17, 17, 63);
+      color: $text-blue;
       font-weight: bold;
     }
 
     p {
       font-size: 1.5rem;
       font-weight: bold;
-      color: rgb(17, 17, 63);
+      color: $text-blue;
     }
 
     button {
@@ -148,18 +150,18 @@ main {
       margin-top: 3rem;
       margin-left: 45rem;
       border: none;
-      background-color: #0d6efd;
-      color: #fffff2;
+      background-color: $background-button;
+      color: $text-button;
       transition: all 0.4s;
 
     }
     button:hover{
-      background-color: rgb(17, 17, 63);
+      background-color: $background-blue;
       
     }
   }
 
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: $background-container;
   .description-container {
     width: 50%;
     text-align: center;
@@ -181,7 +183,7 @@ main {
     }
 
     .card-body {
-      background-color: rgba(255, 255, 255, 0.75);
+      background-color: $background-container;
       display: flex;
       flex-direction: column;
       padding: 1rem;

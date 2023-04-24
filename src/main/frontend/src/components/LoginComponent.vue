@@ -64,6 +64,7 @@ function counter(value) {
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/variables";
 
 body {
   .wrapper {
@@ -71,7 +72,7 @@ body {
     height: 22em;
     margin: 5em;
     padding: 5em;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: $background-container;
     border-radius: 0.5em;
     display: flex;
     flex-direction: column;
@@ -83,23 +84,23 @@ body {
     }
 
     .form-label {
-      color: rgb(17, 17, 63);
+      color: $background-blue;
       font-weight: bold;
       font-size: 3vh;
     }
    
 
     #btn-delete {
-      background-color: #cc0033;
+      background-color: $text-red;
       width: 20vw;
-      color: #fffff2;
+      color: $text-button;
       font-size: 2.5vh;
     }
 
     #btn-send {
-      background-color: rgb(17, 17, 63);
+      background-color: $background-blue;
       width: 20vw;
-      color: #fffff2;
+      color: $text-button;
       font-size: 2.5vh;
     }
     .btn-container {
@@ -127,12 +128,12 @@ body {
       #btn-delete {
         
         width: 10vw;
-        color: #fffff2 ;
+        color: $text-button  ;
       }
       #btn-send {
         
         width: 10vw;
-        color: #fffff2 ;
+        color: $text-button ;
       }
       
       .btn-container {

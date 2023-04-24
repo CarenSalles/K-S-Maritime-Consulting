@@ -65,14 +65,15 @@
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/variables";
 .footer {
-  background-color: rgb(17, 17, 63);
+  background-color: $background-blue;
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
   justify-content: space-between;
   align-items: end;
-  color: aliceblue;
+  color: $text-footer;
   padding: 2rem;
 
   &__container-log {
@@ -96,13 +97,13 @@
 
     &__copyright {
       font-size: 3.3vh;
-      color: #ddbb44;
+      color: $text-copyright;
       margin-bottom: 0.2rem;
     }
   }
 
   &__container-navigation {
-    background-color: rgb(17, 17, 63);
+    background-color: $background-blue;
     ul {
       list-style: none;
       padding: 0;
@@ -110,12 +111,12 @@
       font-size: 3vh;
     }
     a {
-      color: aliceblue;
+      color: $text-footer;
       transition: all 0.4s;
     }
     a.router-link-exact-active,
     a:hover {
-      color: #ddbb44;
+      color: $text-navbar;
       letter-spacing: 1px;
     }
   }

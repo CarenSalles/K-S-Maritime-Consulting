@@ -43,6 +43,7 @@ const page = (algo) => {
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/variables";
 .services-view{
     display: flex;
     flex-direction: column;
@@ -53,7 +54,7 @@ const page = (algo) => {
         width: 90%;
         margin: 2em;
         font-weight: bold;
-        color:rgb(17, 17, 63);
+        color:$text-blue;
         font-size: 3em;
         text-decoration:underline;
     }
@@ -63,7 +64,7 @@ const page = (algo) => {
         flex-direction: column;
         align-items: center;
         font-weight: bold;
-        color:rgb(17, 17, 63) ;
+        color:$text-blue;
     }
 }
 </style>

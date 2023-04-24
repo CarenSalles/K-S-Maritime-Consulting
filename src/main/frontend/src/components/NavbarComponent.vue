@@ -48,6 +48,8 @@ import { RouterLink } from "vue-router";
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/variables";
+
 nav {
   .container {
     img.logo {
@@ -58,14 +60,14 @@ nav {
   }
 }
 .navbar{
- background-color: rgb(17, 17, 63);
+ background-color: $background-blue;
  a{
-    color:aliceblue;
+    color:$text-footer;
     transition: all 0.4s;
  }
  a.router-link-exact-active,
  a:hover{
-    color:#DDBB44;
+    color:$text-navbar;
     letter-spacing: 1px;
  }
 }

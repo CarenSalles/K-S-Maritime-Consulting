@@ -106,6 +106,7 @@ function deletePost(id) {
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/variables";
 .card {
   width: 90%;
   height: 50vh;
@@ -142,7 +143,7 @@ function deletePost(id) {
     font-weight: bold;
     font-size: 3vh;
     span{
-      color: #cc0033;
+      color: $text-red;
     }
   }
 
@@ -157,7 +158,7 @@ function deletePost(id) {
     width: 100%;
     display: flex;
     padding: 0.7rem;
-    background-color: rgb(211, 211, 214);
+    background-color: $background-body;
     color: rgb(17, 17, 63);
     max-height: 30vh;
 
@@ -180,8 +181,7 @@ function deletePost(id) {
   .btnsUser {
     display: flex;
     justify-content: space-around;
-    // width: 100%;
-    // justify-content: center;
+    
   }
   .font-name {
     font-size: 1rem;
@@ -199,6 +199,6 @@ function deletePost(id) {
   }
 }
 .card {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: $background-component;
 }
 </style>
