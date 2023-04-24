@@ -93,6 +93,8 @@ async function update() {
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/sass/variables";
+
 h2 {
   font-family: "Libre Baskerville", serif;
   text-align: center;
@@ -106,7 +108,7 @@ h2 {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(211, 211, 214);
+  background-color: $background-body;
   height: 70vh;
 }
 
@@ -121,7 +123,7 @@ h2 {
 
 input {
   width: 100%;
-  background-color: #ffffff;
+  background-color: $background-white;
 }
 
 .btn {
