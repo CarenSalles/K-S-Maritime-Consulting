@@ -89,7 +89,6 @@ El propósito es buscar clientes que prioricen servicios de calidad, modernos y 
 - Bootstrap
 - Java
 - JavaScript
-- AXIOS
 - MySql
 - Git - GitHub
 - Slack
@@ -104,6 +103,16 @@ https://drive.google.com/file/d/1-IrNao-4y1P-c9j7P0xoYMSEs9hRgyOe/view?usp=shari
 ### Diagrama de Base de Datos
 
 ![Diagrama-basededatos-K S  Maritime Consulting](https://user-images.githubusercontent.com/116892294/233790064-93f3ebad-40ad-4423-b142-c91fb19d8a5d.png)
+
+### Diagrama UML
+
+![Captura de tela 2023-04-24 233453](https://user-images.githubusercontent.com/116892294/234122052-03420d23-7034-4ad3-8b67-3edb4e4de806.png)
+
+### Enlace Figma:
+https://www.figma.com/file/p7p4ilx6JEu5qrdJIBVOhq/Kralj-%26-Salles-MaritimeConsulting?node-id=0-1&t=jTDxlPXe1jXto4gG-0
+
+### Enlace Jira:
+https://carenf5.atlassian.net/jira/software/projects/KMC/boards/6
 
 # Instalación
 
