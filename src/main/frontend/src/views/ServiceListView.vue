@@ -199,6 +199,8 @@ function deletePost(id) {
   }
 }
 .card {
+
   background-color: $background-component;
+
 }
 </style>
