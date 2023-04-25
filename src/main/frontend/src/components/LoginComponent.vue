@@ -4,12 +4,6 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter()
 
-// const props = defineProps({
-//   title:{
-//     type: String,
-//     default: 'login'
-//   }
-// })
 
 const username = ref("")
 const password = ref("")
